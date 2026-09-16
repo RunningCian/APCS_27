@@ -8,7 +8,8 @@ import java.util.Scanner;
 class starter {
 	public static void main(String args[]) {
 	double Fahrenheit = 97.0;
-	double Celsius = ((5/9)*(Fahrenheit)-32);
-	System.out.print(Celsius);
+	double Celsius = ((Fahrenheit-32.0)*(5.0/9.0));
+	System.out.print("It is "+Celsius);
+	System.out.print(" Degrees Celsius Right Now!!!!!!");
 	}
 }
