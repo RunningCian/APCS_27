@@ -1,6 +1,6 @@
 /*
- *	Author:  
- *  Date: 
+ *	Author:  Cian Byrne
+ *  Date: 10/30/26
 */
 
 package pkg;
@@ -18,29 +18,29 @@ public class PooleDwarf {
 	}
 
 	public PooleDwarf(String name, int age){
-		// Complete this constructor
+		this.name = name;
+        this.age = age;
 	}
 
 	/*	Accessor Methods */
 	public String getName(){
-		return name;
+		return this.name;
 	}
-
 	public int getAge(){
-
+		return this.age;
 	}
 
 	/*	Mutator Methods	*/
 	public void setName(String nane){
-		// Fix this method
+		this.name = name;
 	}
 	
-	public void setAge(String age){
-		// Fix this method
+	public void setAge(int age){
+		this.age = age;
 	}
 
 	public boolean isSameName(String name){
-		// Complete this method
+		return this.name.equals(name);
 	}
 }
 

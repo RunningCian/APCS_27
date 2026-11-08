@@ -1,6 +1,6 @@
 /*
- *	Author:  
- *  Date: 
+ *	Author:  Cian Byrne
+ *  Date: 10/30/26
 */
 
 package pkg;
@@ -19,10 +19,10 @@ public class Donkey {
 		return name;
 	}
 
-	public void interact(String shrek){
-		System.out.println(shrek.name + ", parfaits may be the most delicious thing on the whole planet!");
-		return;
-	}
+	public void interact(Ogre shrek){
+        System.out.println(shrek.getName() + ", parfaits may be the most delicious thing on the whole planet!");
+        return;
+    }
 
 
 
