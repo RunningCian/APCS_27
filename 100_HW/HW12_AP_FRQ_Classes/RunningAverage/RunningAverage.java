@@ -1,3 +1,7 @@
+// Cian Byrne
+// 11/08/26
+
+
 import java.util.*;
 
 public class RunningAverage{
@@ -14,14 +18,18 @@ public class RunningAverage{
     * initialized to 0.0.
     */
     public RunningAverage(){
-        /* implementation not shown */
+        count = 0;
+        average = 0.0;
     }
 
     /** Updates the running average to reflect the entry of a new
     * rating, as described in part (a).
     */
     public void updateAverage(double newVal){
-        /* to be implemented in part (a) */
+       double total = (count * average);
+        total = total + newVal;
+        count = count + 1;
+        average = (total/count);
     }
 
 
@@ -32,11 +40,23 @@ public class RunningAverage{
     * Precondition: num > 0
     */
     public int processNewRatings(int num){
-        /* to be implemented in part (b) */
+    int invalidCount = 0;
+    int i = 0;
+        while (i < num) {
+            double rating = getNewRating();
+            if (rating >= 0) {
+                updateAverage(rating);
+            } else {
+                invalidCount = invalidCount + 1;
+            }
+            i = i + 1;
+        }
+        return invalidCount;
     }
 
     /** Returns a single numeric rating. */
     public double getNewRating(){
         /* implementation not shown */
+        return 0.0;
     }
 }
